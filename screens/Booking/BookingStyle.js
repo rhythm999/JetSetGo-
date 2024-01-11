@@ -1,0 +1,133 @@
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "grey",
+  },
+  backgroundShape: {
+    flex: 1,
+    backgroundColor: "#673147",
+    transform: [{ rotate: "30deg" }],
+    position: "fixed",
+    borderRadius: 60,
+    width: "100%",
+  },
+  passengerCounter: {
+    position: "absolute",
+    width: "100%",
+    paddingVertical: 50,
+    paddingHorizontal: 20,
+    height: "100%",
+  },
+  passengerCounterBox: {
+    backgroundColor: "#fff",
+    borderRadius: 15,
+    flex: 0.3,
+    padding: 20,
+  },
+  passengerInputBox: {
+    borderWidth: 0.5,
+    borderColor: "grey",
+    borderRadius: 15,
+    marginVertical: 20,
+    flex: 0.4,
+    paddingLeft: 20,
+    fontWeight: "700",
+    letterSpacing: 5,
+  },
+  updateBtn: {
+    backgroundColor: "pink",
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 0.6,
+    borderRadius: 30,
+  },
+  passengerDetails: {
+    flex: 0.7,
+    backgroundColor: "#fff",
+    marginTop: 20,
+  },
+  passenrDetailBox: {
+    padding: 10,
+    borderWidth: 0.5,
+    borderColor: "grey",
+    margin: 15,
+  },
+  passengerNumber: {
+    fontSize: 19,
+    fontWeight: "900",
+    color: "grey",
+    letterSpacing: 5,
+  },
+  inputHeading: {
+    fontSize: 15,
+    fontWeight: "500",
+    letterSpacing: 3,
+    color: "grey",
+  },
+  passengerDEtailInputBox: {
+    borderWidth: 0.3,
+    borderColor: "grey",
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    marginVertical: 10,
+  },
+  bookBtn: {
+    flex: 0.115,
+    marginVertical: 15,
+    marginHorizontal: 35,
+  },
+  bookText: {
+    fontWeight: "bold",
+    fontSize: 20,
+    letterSpacing: 5,
+    color: "#673147",
+  },
+  modalContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+    backgroundColor: "rgba(128, 128, 128, 0.5)",
+  },
+  bookedBox: {
+    flex: 0.4,
+    width: "90%",
+    backgroundColor: "#fff",
+    borderRadius: 35,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  image: {
+    width: 80,
+    height: 80,
+  },
+  successfulText: {
+    fontWeight: "900",
+    fontSize: 25,
+    letterSpacing: 4,
+    textAlign: "center",
+    fontStyle: "italic",
+    color: "grey",
+    marginVertical: 10,
+  },
+  thankYouText: {
+    fontWeight: "300",
+    letterSpacing: 2,
+  },
+  homeBtn: {
+    backgroundColor: "#673147",
+    width: "70%",
+    margin: 20,
+    padding: 10,
+    borderRadius: 20,
+  },
+  backHomeText: {
+    textAlign: "center",
+    fontWeight: "bold",
+    letterSpacing: 1,
+    fontSize: 18,
+    color: "#fff",
+  },
+});
+export default styles;

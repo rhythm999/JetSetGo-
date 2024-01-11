@@ -42,11 +42,21 @@ function HomeScreen() {
           <DateList />
         </View>
         <View style={styles.flightListContainer}>
-          <FlatList
-            data={FlightDataFromApi}
-            renderItem={({ item }) => <FlightDetailCard flightDetails={item} />}
-            keyExtractor={(item) => item.id}
-          />
+          {FlightDataFromApi.length == 0 ? (
+            <View style={styles.noDataFoundBox}>
+              <Text style={styles.noDataFoundText}>
+                Currently We have no data for your match !
+              </Text>
+            </View>
+          ) : (
+            <FlatList
+              data={FlightDataFromApi}
+              renderItem={({ item }) => (
+                <FlightDetailCard flightDetails={item} />
+              )}
+              keyExtractor={(item) => item.id}
+            />
+          )}
         </View>
       </View>
     </View>

@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export default styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:"grey"
+    backgroundColor: "grey",
   },
   backgroundShape: {
     flex: 1,
@@ -38,5 +38,18 @@ export default styles = StyleSheet.create({
   filterComponent: {
     flex: 0.12,
     marginTop: 15,
+  },
+  noDataFoundText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+    color: "purple",
+    letterSpacing: 4,
+    lineHeight: 40,
+  },
+  noDataFoundBox: {
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%",
   },
 });

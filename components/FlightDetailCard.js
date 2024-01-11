@@ -1,12 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 function FlightDetailCard({ flightDetails }) {
+  const navigation = useNavigation();
+
   let displayData = flightDetails.displayData;
-  let flightSource = displayData.source ;
+  let flightSource = displayData.source;
   let flightDestination = displayData.destination;
   return (
-    <View style={styles.cardContainer}>
+    <TouchableOpacity
+      style={styles.cardContainer}
+      onPress={() => {
+        navigation.navigate("BookTicket");
+      }}
+    >
       <View style={styles.airlineNameandFareContainer}>
         <Text style={styles.airlineName}>
           {displayData.airlines[0].airlineName}
@@ -54,7 +62,7 @@ function FlightDetailCard({ flightDetails }) {
           </Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
