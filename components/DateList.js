@@ -13,10 +13,12 @@ export default DateList = () => {
   const [saveToggle, setSaveToggle] = useState(false);
   const dispatch = useDispatch();
 
+  //fetching backupList from redux store
   const dataList = useSelector((state) => {
     return state.jestSetGoBackup;
   });
 
+  // fetching various airlines and cities
   useEffect(() => {
     let airlineNames = dataList.map(
       (list) => list.displayData.airlines[0].airlineName
@@ -33,6 +35,7 @@ export default DateList = () => {
     setDiffrentPlaces(places);
   }, [dataList]);
 
+  //filtering the flights data
   useEffect(() => {
     if ("") {
       dispatch(fetchFlightData(dataList));
@@ -57,6 +60,7 @@ export default DateList = () => {
     }
   }, [saveToggle]);
 
+  // converting 1h20m into minutes
   function convertToMinutes(travelTime) {
     const [hours, minutes] = travelTime
       .split("h ")

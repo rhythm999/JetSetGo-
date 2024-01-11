@@ -9,14 +9,17 @@ import DateList from "../../components/DateList";
 function HomeScreen() {
   const dispatch = useDispatch();
 
+  // hitting the api
   useEffect(() => {
     getFlightDataFromAPI();
   }, []);
 
+  //fetching the data from store
   const FlightDataFromApi = useSelector((state) => {
     return state.jetsetGoFlightData;
   });
 
+  // api fetch
   let getFlightDataFromAPI = async () => {
     try {
       await fetch("https://api.npoint.io/4829d4ab0e96bfab50e7")

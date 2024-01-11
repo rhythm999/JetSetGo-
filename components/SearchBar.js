@@ -9,6 +9,7 @@ const SearchBar = () => {
   const [clicked, setClicked] = useState(false);
   const dispatch = useDispatch();
 
+  // fetching the data from redux store
   const FlightDataFromApi = useSelector((state) => {
     return state.jestSetGoBackup;
   });

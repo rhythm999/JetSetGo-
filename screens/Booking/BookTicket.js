@@ -31,6 +31,7 @@ let BookTicket = () => {
     },
   ]);
 
+  //updating passenger list
   let updatePassengerList = () => {
     if (passengerCount > passengerDetail.length) {
       let allData = [...passengerDetail];
@@ -74,6 +75,7 @@ let BookTicket = () => {
     }
   };
 
+  //booking the tickets
   let bookTheTickets = async () => {
     let detailsFilled = true;
     await passengerDetail.map((passenger) => {
@@ -188,7 +190,12 @@ let BookTicket = () => {
               <Text style={styles.thankYouText}>
                 Thank you for choosing our service!
               </Text>
-              <TouchableOpacity style={styles.homeBtn} onPress={() => {navigation.navigate("HomeScreen")}}>
+              <TouchableOpacity
+                style={styles.homeBtn}
+                onPress={() => {
+                  navigation.navigate("HomeScreen");
+                }}
+              >
                 <Text style={styles.backHomeText}>Go to Home</Text>
               </TouchableOpacity>
             </View>
